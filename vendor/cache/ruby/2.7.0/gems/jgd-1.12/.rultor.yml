@@ -1,0 +1,27 @@
+readers:
+  - "urn:github:526301"
+decrypt:
+  rubygems.yml: repo/rubygems.yml.asc
+install: |-
+  git config --global user.email "test@example.com"
+  git config --global user.name "Test"
+  export GEM_HOME=~/.ruby
+  export GEM_PATH=$GEM_HOME:$GEM_PATH
+  bundle install
+release:
+  script: |-
+    bundle exec rake
+    ./test.sh
+    rm -rf *.gem
+    sed -i "s/2.0.snapshot/${tag}/g" jgd.gemspec
+    gem build jgd.gemspec
+    chmod 0600 ../rubygems.yml
+    gem push *.gem --config-file ../rubygems.yml
+merge:
+  script: |-
+    bundle exec rake
+    ./test.sh
+deploy:
+  script: |-
+    echo 'There is nothing to deploy'
+    exit -1
