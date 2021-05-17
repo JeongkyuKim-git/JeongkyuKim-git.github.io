@@ -1,0 +1,76 @@
+I"}<h3>   </h3>
+
+<div id="categories">
+
+  <div class="category-box">
+    
+    <div id="#jekyll"></div>
+    <h4 class="category-head"><a href="/blog/categories/jekyll">jekyll</a></h4>
+    <a name="jekyll"></a>
+     
+    <article class="center">
+      <h6><a href="/blog/adding-categories-tags-in-posts/">Adding Multiple Categories in Posts</a></h6>
+    </article>
+
+
+    
+    <article class="center">
+      <h6><a href="/blog/added-multi-author-support/">Added Multi Author Support</a></h6>
+    </article>
+
+
+    
+    <article class="center">
+      <h6><a href="/blog/added-latex-equations-support/">Added Latex Support</a></h6>
+    </article>
+
+
+    
+    <article class="center">
+      <h6><a href="/blog/using-netlify-cms/">Netlify CMS created this Article</a></h6>
+    </article>
+
+
+    
+    <article class="center">
+      <h6><a href="/blog/welcome-to-devlopr-jekyll/">Welcome to devlopr-jekyll !</a></h6>
+    </article>
+
+
+    
+
+  </div>
+
+  <div class="category-box">
+    
+    <div id="#guides"></div>
+    <h4 class="category-head"><a href="/blog/categories/guides">guides</a></h4>
+    <a name="guides"></a>
+     
+    <article class="center">
+      <h6><a href="/blog/adding-categories-tags-in-posts/">Adding Multiple Categories in Posts</a></h6>
+    </article>
+
+
+    
+
+  </div>
+
+  <div class="category-box">
+    
+    <div id="#sample_category"></div>
+    <h4 class="category-head"><a href="/blog/categories/sample_category">sample_category</a></h4>
+    <a name="sample_category"></a>
+     
+    <article class="center">
+      <h6><a href="/blog/adding-categories-tags-in-posts/">Adding Multiple Categories in Posts</a></h6>
+    </article>
+
+
+    
+
+  </div>
+
+</div>
+
+:ET

@@ -1,0 +1,127 @@
+I"15<h2 id="now-multiple-authors-can-create-articles">Now Multiple Authors Can Create Articles:</h2>
+
+<p>You can now create or collaborate with multiple authors,Especially when you are working with teams. Each author will have a unique page of her written articles also her profile widget in Articles written by his/her.</p>
+
+<p>For this every Author needs to have a unique username (without space) For eg. If Author is John Doe - the username should be <strong>johndoe</strong> or <strong>john-doe</strong> (without space).This key will be used by devlopr, to fetch individual author’s profile pages internally.</p>
+
+<h3 id="configuring-authors-">Configuring Authors :</h3>
+
+<p>Under _authors folder create a author details file (username.md) with his/her username (as described above). For eg. <strong>johndoe.md</strong>.</p>
+
+<p>Then add this frontmatter to describe the author in <strong>johndoe.md</strong>.</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">John Doe</span> <span class="c1"># Name of the Author</span>
+<span class="na">username</span><span class="pi">:</span> <span class="s">johndoe</span> <span class="c1"># Username of the Author</span>
+<span class="na">bio</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hi</span><span class="nv"> </span><span class="s">I</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">John,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Web</span><span class="nv"> </span><span class="s">Developer</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Designer."</span> <span class="c1"># Author Bio</span>
+<span class="na">site</span><span class="pi">:</span> <span class="s">http://johndoe.com</span>  <span class="c1"># Author Website URL</span>
+<span class="na">avatar</span><span class="pi">:</span> <span class="s">johndoe.png</span>  <span class="c1"># Profile Image (img path will be /assets/img/authors/johndoe.png)</span>
+<span class="na">email</span><span class="pi">:</span> <span class="s">mail@johndoe.com</span>  <span class="c1"># Author Email address</span>
+<span class="na">social</span><span class="pi">:</span>  <span class="c1"># Author Social profile links</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">linkedin"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.linkedin.com/in/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">youtube"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">facebook"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.facebook.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">twitter"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.twitter.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">behance"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://behance.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">instagram"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://instagram.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://medium.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">telegram"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://telegram.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">dribbble"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://dribbble.com/johndoe"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">flickr"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://flickr.com/johndoe"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p>You can create multiple authors similarly under _authors</p>
+
+<p>Next, copy the same frontmatter in _data/authors.yml (under individual author usernames) like this :</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Author 1</span>
+<span class="na">johndoe</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">John Doe</span>
+   <span class="na">username</span><span class="pi">:</span> <span class="s">johndoe</span>
+   <span class="na">site</span><span class="pi">:</span> <span class="s">http://johndoe.com</span>
+   <span class="na">avatar</span><span class="pi">:</span> <span class="s">johndoe.png</span>
+   <span class="na">bio</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hi</span><span class="nv"> </span><span class="s">I</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">John,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Web</span><span class="nv"> </span><span class="s">Developer</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Designer."</span>
+   <span class="na">email</span><span class="pi">:</span> <span class="s">mail@johndoe.com</span>
+   <span class="na">social</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">linkedin"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.linkedin.com/in/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">youtube"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">facebook"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.facebook.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">twitter"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.twitter.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">behance"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://behance.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">instagram"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://instagram.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">medium"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://medium.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">telegram"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://telegram.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">dribbble"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://dribbble.com/johndoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">flickr"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://flickr.com/johndoe"</span>
+
+<span class="c1"># Author 2</span>
+<span class="na">janedoe</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">Jane Doe</span>
+   <span class="na">username</span><span class="pi">:</span> <span class="s">janedoe</span>
+   <span class="na">site</span><span class="pi">:</span> <span class="s">https://janedoe.com</span>
+   <span class="na">avatar</span><span class="pi">:</span> <span class="s">jane.png</span>
+   <span class="na">bio</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Designer"</span>
+   <span class="na">email</span><span class="pi">:</span> <span class="s">mail@janedoe.com</span>
+   <span class="na">social</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">github"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/janedoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">linkedin"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.linkedin.com/janedoe"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">youtube"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"</span>
+      <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">facebook"</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://www.facebook.com/janedoe"</span>
+
+</code></pre></div></div>
+
+<p>Likewise ! This will be helpful for the widgets. (About Author, Recent Articles).</p>
+
+<h3 id="adding-author-to-post">Adding Author to Post</h3>
+
+<p>When creating a new post, just add the author in frontmatter using the username of the author</p>
+
+<p>For eg, In 2020-10-24-demo-article.md</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Demo</span><span class="nv"> </span><span class="s">Article"</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">janedoe</span>
+<span class="nn">---</span>
+<span class="s">This is Jane Doe's Article</span>
+</code></pre></div></div>
+
+<p>Now there will be Authors widget in Blog Sidebar, showing all authors like this :</p>
+
+<p><img src="https://res.cloudinary.com/sujaykundu/image/upload/c_scale,fl_progressive,w_400/v1603700133/3_tiuar0.png" alt="Author Sidebar Widget" /></p>
+
+<p>Also a Author Profile Page will be created for Jane Doe to showcase her written articles.</p>
+
+<p><img src="https://res.cloudinary.com/sujaykundu/image/upload/c_scale,fl_progressive,w_400/v1603643237/1_ee3yke.png" alt="Author Page" /></p>
+
+<p>Also, below this article you can see the Author Profile Card , who has written the article too ! ;)</p>
+
+<p>Cheers ! Hope You enjoy this new feature. :D</p>
+
+:ET

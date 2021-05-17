@@ -1,0 +1,17 @@
+I"
+<h5> Posts by Category : Jekyll </h5>
+
+<div class="card">
+
+ <li class="category-posts"><span>28 Feb 2021</span> &nbsp; <a href="/blog/adding-categories-tags-in-posts/">Adding Multiple Categories in Posts</a></li>
+
+ <li class="category-posts"><span>25 Oct 2020</span> &nbsp; <a href="/blog/added-multi-author-support/">Added Multi Author Support</a></li>
+
+ <li class="category-posts"><span>24 Oct 2020</span> &nbsp; <a href="/blog/added-latex-equations-support/">Added Latex Support</a></li>
+
+ <li class="category-posts"><span>23 May 2020</span> &nbsp; <a href="/blog/using-netlify-cms/">Netlify CMS created this Article</a></li>
+
+ <li class="category-posts"><span>22 May 2019</span> &nbsp; <a href="/blog/welcome-to-devlopr-jekyll/">Welcome to devlopr-jekyll !</a></li>
+
+</div>
+:ET

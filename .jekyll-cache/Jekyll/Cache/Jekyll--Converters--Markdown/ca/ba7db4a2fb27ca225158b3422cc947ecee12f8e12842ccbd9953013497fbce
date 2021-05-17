@@ -1,0 +1,29 @@
+I"'<p><!-- Single Gallery --></p>
+<div class="col-lg-12">
+    <div id="imageGallery">
+      <div id="gallery-sizer"></div>
+      
+        <a href="/assets/img/gallery/mountains/1.jpg" data-responsive=" /assets/gallery/mountains/1.jpg" class="image">
+          <img alt="" class="img-thumbnail" src="/assets/img/gallery/mountains/1-thumbnail.jpg" />
+        </a>
+      
+        <a href="/assets/img/gallery/mountains/2.jpg" data-responsive=" /assets/gallery/mountains/2.jpg" class="image">
+          <img alt="" class="img-thumbnail" src="/assets/img/gallery/mountains/2-thumbnail.jpg" />
+        </a>
+      
+        <a href="/assets/img/gallery/mountains/3.jpg" data-responsive=" /assets/gallery/mountains/3.jpg" class="image">
+          <img alt="" class="img-thumbnail" src="/assets/img/gallery/mountains/3-thumbnail.jpg" />
+        </a>
+      
+      </div>
+  </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#imageGallery").lightGallery({
+          thumbnail: false,
+          selector: '.image'
+        });
+    });
+</script>
+
+:ET
